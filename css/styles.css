@@ -1138,3 +1138,8 @@ input:checked + label > span {
   align-items: flex-start;
   gap: 40px;
 }
+.mobile-social-media-list {
+  display: flex;
+  gap: 30px;
+  padding-top: 48px;
+}
