@@ -1114,7 +1114,7 @@ input:checked + label > span {
 .mobile-tel {
   color: var(--iris, #4d5ae5);
   font-family: Roboto;
-  font-size: 36px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 40px; /* 111.111% */
