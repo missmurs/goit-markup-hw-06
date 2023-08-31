@@ -280,13 +280,23 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/dark-bg-mob.jpg);
+    url(../images/hero/Dark-bg_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_mob@1x.jpg);
+  }
+}
 .hero-title {
   color: var(--white);
   max-width: 320px;
@@ -305,7 +315,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/dark-bg-tab.jpg);
+      url(../images/hero/Dark-bgtab_@1x.jpg);
     max-width: 768px;
   }
   .hero-title {
@@ -314,6 +324,17 @@ img {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bgtab_@2x.jpg);
+    }
   }
 }
 
@@ -324,12 +345,23 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/hero-bg-desk.jpg);
+      url(../images/hero/people-office1des_@1x.jpg);
     max-width: 1440px;
     padding: 188px 0;
   }
   .hero-title {
     margin-bottom: 48px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/people-office1des_@2x.jpg);
+    }
   }
 }
 .hero-container {
