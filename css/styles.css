@@ -54,10 +54,10 @@ img {
   height: auto;
 }
 /* reset end */
-.link:hover,
+/* .link:hover,
 .link:focus {
-  color: var(--ocean);
-}
+  color: var(--pressed-state);
+} */
 .section-title {
   text-align: center;
   font-size: 36px;
@@ -110,7 +110,7 @@ img {
 /* DESCKTOP */
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1188px;
+    max-width: 1158px;
     padding: 0 15px;
   }
 }
@@ -217,7 +217,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--navyblue);
 }
 
 .list-item::after {
@@ -235,6 +234,12 @@ img {
   color: var(--pressed-state);
   bottom: -1px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list-item.current {
+  color: var(--pressed-state);
+}
+.mobile-menu-link.current {
+  color: var(--pressed-state);
 }
 .address {
   font-style: normal;
@@ -262,7 +267,6 @@ img {
   letter-spacing: 0.02em;
   color: var(--text);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 16px;
 }
 
 /**
@@ -425,13 +429,16 @@ img {
   color: var(--text);
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.32px;
 }
 @media only screen and (max-width: 767.98px) {
   .advantages-item:not(:last-child) {
     margin-bottom: 72px;
+  }
+  .advantages-item-title {
+    text-align: center;
+    margin: 0 auto;
   }
 }
 /* TABLET */
@@ -485,7 +492,7 @@ img {
   |============================
 */
 /* DESKTOP */
-@media only screen and (max-width: 1158px) {
+@media only screen and (max-width: 1157.98px) {
   .make-section {
     display: none;
   }
@@ -512,7 +519,7 @@ img {
 */
 /* MOBILE */
 .team-section {
-  background: var(--cloud);
+  background: var(--light);
   padding: 96px 0;
 }
 .team-card-list {
@@ -929,12 +936,20 @@ img {
 .mobile-tel {
   color: var(--primary-brand);
 
-  font-size: 24px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 40px; /* 111.111% */
   letter-spacing: 0.72px;
   text-transform: capitalize;
+}
+@media screen and (max-width: 428px) {
+  .mobile-tel {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+  }
 }
 .mobile-mail {
   color: var(--text);
@@ -950,10 +965,12 @@ img {
   align-items: flex-start;
   gap: 40px;
 }
-.icons-list {
-  padding-top: 40px;
-}
 
+.icons-list-mobile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
 /**
   |============================
   | Modal window
@@ -1147,10 +1164,18 @@ input:checked + label > span {
   color: var(--iris, #4d5ae5);
 }
 .btn-form {
+  padding: 16px 32px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+
   display: block;
   min-width: 169px;
   height: 56px;
-
+  align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
